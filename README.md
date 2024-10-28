@@ -1,30 +1,24 @@
-﻿🎮 **Bluetooth GamePad Over LAN: Windows Server**
+﻿🎮 **Bluetooth GamePad Over LAN: Windows Client**
 
 Easily transform your Android phone into a GamePad, sending Bluetooth inputs directly to your PC over your local network. Perfect for when you need a controller on the fly, with seamless setup and operation, without the need to buy a Bluetooth USB adapter.
 
 ---
 
-✨ **Key Features**
+✨ **Effortless Setup**
 
-*Effortless Setup* 
-   
--
-   Instant Connection: Android app automatically detects and links with the Windows server on the same network.
--  
-   GamePad Emulation: Emulate a full-fledged Bluetooth GamePad to unlock a genuine gaming experience on Windows.
+- Instant Connection: Android app automatically detects and links with the Windows client on the same network.
+- GamePad Emulation: Emulate a full-fledged Xbox / Playstation Bluetooth GamePad on Windows.
 
 --- 
 
 🚀 **Getting Started**
 
-🔥 **Add exception to your Firewall if one is enabled, otherwise connections are blocked**
-
 *Prerequisites*
 
-To start, you’ll need to install the following driver on your Windows machine:
+To start, you’ll need to install the ViGEmBus driver on your Windows machine. 
+I have also included the install within the "Drivers" folder with the release build
 
--
-   #ViGEmBus Driver:   
+- ViGEmBus Driver:   
    
       https://github.com/nefarius/ViGEmBus
 
@@ -34,22 +28,20 @@ ViGEmBus Driver: Enables emulation of your Bluetooth GamePad on Windows, creatin
 
 *Installation & Setup*
 
-- 
-    Download the Windows server build from this repository and install it onto you pc.
--
-    Download the latest Android build from the BluetoothControllerOverLANClient repository and install it on your Android device.
-
-       
+- Download the *GamePad Server* release build from this repository and install it onto you pc.
+  
+- Download the *GamePad Client* release build for your Android device and install it on your Android device.
+      
        https://github.com/p3k22/P3k-Bluetooth-GamePad-Over-LAN-Client
        
-    Run the server on your PC, and let your Android app automatically find it over the network.
-    
-    Enjoy! Once connected, your Android device will behave like a native Bluetooth GamePad on your PC.
+- Run the *GamePad Server* on your PC, and let your Android *GamePad Client* automatically find it over the network.
 
+    
+🔥 **Add an exception to allow the *GamePad Server* through your Firewall. Connections will be blocked otherwise** 🔥 
+   
 ---
 
 🎉 You're All Set – Time to Game!
 
-Plug and play with your Android-powered controller for a fully immersive gaming experience right from your phone.
-
-Happy gaming!
+Once connected, your Android device will behave like a native Bluetooth GamePad on your PC.
+Enjoy!
