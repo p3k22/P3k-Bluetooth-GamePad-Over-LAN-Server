@@ -9,8 +9,6 @@ Easily transform your Android phone into a GamePad, sending Bluetooth inputs dir
 *Effortless Setup* 
    
 -
-   Connect to your PC's Windows server automatically.
--
    Instant Connection: Android app automatically detects and links with the Windows server on the same network.
 -  
    GamePad Emulation: Emulate a full-fledged Bluetooth GamePad to unlock a genuine gaming experience on Windows.
@@ -18,6 +16,8 @@ Easily transform your Android phone into a GamePad, sending Bluetooth inputs dir
 --- 
 
 🚀 **Getting Started**
+
+🔥 **Add exception to your Firewall if one is enabled, otherwise connections are blocked**
 
 *Prerequisites*
 
