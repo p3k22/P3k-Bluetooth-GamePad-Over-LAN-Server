@@ -1,0 +1,62 @@
+﻿<Window x:Class="P3k_Bluetooth_GamePad_Over_LAN.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="P3k Bluetooth Controller Emulator" Height="300" Width="725" MinWidth="350" MinHeight="301">
+
+    <Window.Resources>
+        <SolidColorBrush x:Key="CustomBackgroundColor" Color="#FF28292B"/>
+    </Window.Resources>
+
+    <Grid Background="{StaticResource CustomBackgroundColor}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <WrapPanel Grid.Row="0" HorizontalAlignment="Left" Margin="5">
+            <Label Content="Controller is: " FontWeight="Bold" Foreground ="WhiteSmoke" FontSize="20" />
+            <Label x:Name="ControllerState" Content="Disconnected" FontWeight="Bold" Foreground ="Red" FontSize="20" />
+        </WrapPanel> 
+        <WrapPanel Grid.Row="1" HorizontalAlignment="Center">
+            <Label Content="CONTROLS" FontWeight="Bold" Foreground ="WhiteSmoke" />
+        </WrapPanel>
+
+        <WrapPanel Grid.Row="2">
+            <Border BorderBrush="Gray" BorderThickness="1" Height="150" MinWidth="170">
+                <WrapPanel VerticalAlignment="Center">
+                    <ContentControl x:Name="JoystickElements" />
+                </WrapPanel>
+            </Border>
+            <Border BorderBrush="Gray" BorderThickness="1" Height="150">
+                <WrapPanel VerticalAlignment="Center">
+                    <ContentControl x:Name="DPadElements" />
+                </WrapPanel>
+            </Border>
+            <Border BorderBrush="Gray" BorderThickness="1" Height="150">
+                <WrapPanel VerticalAlignment="Center">
+                    <ContentControl x:Name="SecondaryButtonsElements" />
+                </WrapPanel>
+            </Border>
+            <Border BorderBrush="Gray" BorderThickness="1" Height="150">
+                <WrapPanel VerticalAlignment="Center">
+                    <ContentControl x:Name="PrimaryButtonsElements" />
+                </WrapPanel>
+            </Border>
+            <Border BorderBrush="Gray" BorderThickness="1" Height="150">
+                <WrapPanel VerticalAlignment="Center">
+                    <ContentControl x:Name="Triggers" />
+                </WrapPanel>
+            </Border>
+        </WrapPanel>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="StartButton" Content="Start Receiving" Click="StartBroadcasting_Click" Margin="5" Width="110" Height="40"
+                    Padding="4" />
+        </StackPanel>
+    </Grid>
+</Window>
