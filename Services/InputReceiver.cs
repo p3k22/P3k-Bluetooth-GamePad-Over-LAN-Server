@@ -5,6 +5,7 @@
    using System.Net;
    using System.Net.Sockets;
    using System.Text;
+   using System.Text.RegularExpressions;
    using System.Windows;
 
    public class InputReceiver
@@ -139,8 +140,18 @@
                   {
                      if (!string.IsNullOrWhiteSpace(message))
                      {
-                        var extractedValues = ExtractControllerInput.GetFromJson(message);
+                        var match = Regex.Match(message, @"""isPSPad"":(true|false)");
+                        bool? isPSPadValue = null;
+                        if (match.Success)
+                        {
+                           isPSPadValue = bool.Parse(match.Groups[1].Value);
+                        }
 
+                        message = message.Replace("{\"input\":", "");
+                        message = Regex.Replace(message, @",\s*""isPSPad"":(true|false)}", "");
+                        var extractedValues = ExtractControllerInput.GetFromJson(message, isPSPadValue ?? true);
+
+                        //Debug.WriteLine(message);
                         // Ensure application is running before trying to update the UI
                         if (Application.Current?.Dispatcher != null && !cancellationToken.IsCancellationRequested)
                         {

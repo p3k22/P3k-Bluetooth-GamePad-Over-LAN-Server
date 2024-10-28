@@ -98,7 +98,7 @@ public class MainWindowViewModel : INotifyPropertyChanged
    {
       if (ControllerEmulator == null)
       {
-         ControllerEmulator = new ControllerEmulator();
+         ControllerEmulator = new ControllerEmulator(extractedValues["isPSPad"] == 1);
       }
 
       var lx = 0f;

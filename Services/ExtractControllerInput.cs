@@ -4,7 +4,7 @@ using Newtonsoft.Json.Linq;
 
 public static class ExtractControllerInput
 {
-   public static Dictionary<string, float> GetFromJson(string jsonString)
+   public static Dictionary<string, float> GetFromJson(string jsonString, bool isPSPad)
    {
       var extractedValues = new Dictionary<string, float>();
       try
@@ -172,6 +172,8 @@ public static class ExtractControllerInput
          {
             extractedValues["buttonY"] = 0;
          }
+
+         extractedValues["isPSPad"] = isPSPad ? 1 : 0;
 
          return extractedValues;
       }
