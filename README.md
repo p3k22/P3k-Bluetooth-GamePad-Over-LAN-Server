@@ -2,6 +2,9 @@
 
 Easily transform your Android phone into a GamePad, sending Bluetooth inputs directly to your PC over your local network. Perfect for when you need a controller on the fly, with seamless setup and operation, without the need to buy a Bluetooth USB adapter.
 
+![Screenshot of the App](untitled-2.png)
+
+
 ---
 
 ✨ **Effortless Setup**
